@@ -1,5 +1,3 @@
-date=`date`
-
 for haml_file in `find haml -name '*.haml'`
 do
   output="${haml_file:5}"
@@ -7,5 +5,3 @@ do
 done
 
 `git add .`
-`git commit -m "Automatic deploy $date"`
-`git push origin master`
