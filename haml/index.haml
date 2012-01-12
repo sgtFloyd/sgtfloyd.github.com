@@ -1,8 +1,25 @@
+-# Color Palette: Terra http://www.colourlovers.com/palette/292482/Terra
+- terra_terra = "#E8DDCB"     # Flesh Color
+- terra = "#CDB380"           # Tan
+- acqua = "#036564"           # Teal
+- acqua_profonda = "#033649"  # Dark Blue
+- abissio = "#031634"         # Darker Blue
+
+- background_color_top = acqua_profonda
+- background_color_bottom = '#101010'
+- font_color = terra_terra
+
 %html
   %head
     %title sgtFloyd
-    -#%link{:rel => "stylesheet", :type => "text/css", :href => "css/tchotchke.css"}
-    -#%script{:type => 'text/javascript',  :src => 'js/jquery.js'}
+    
+    %style{ :type => "text/css" }
+      :sass
+        body
+          color: #{font_color}
+          background: -webkit-gradient( linear, left top, left bottom, color-stop(0, #{background_color_top}), color-stop(1.5, #{background_color_bottom}) )
+          background: -moz-linear-gradient(center top, #{background_color_top} 0%, #{background_color_bottom} 100%)
+          background-color: #{background_color_bottom}
 
   %body
     %p="Generated #{Time.now}"
