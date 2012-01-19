@@ -4,12 +4,30 @@
     <style type='text/css'>
       body {
         color: #e8ddcb;
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #033649), color-stop(1.5, #101010));
-        background: -moz-linear-gradient(center top, #033649 0%, #101010 100%);
-        background-color: #101010; }
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #033649), color-stop(1.5, black));
+        background: -moz-linear-gradient(center top, #033649 0%, black 100%);
+        background-color: black; }
+      
+      .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        margin-left: -100px;
+        margin-top: -100px; }
+      
+      .rounded {
+        -moz-border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -khtml-border-radius: 20px;
+        border-radius: 20px; }
     </style>
   </head>
   <body>
-    <p>Generated 2012-01-12 17:21:29 -0500</p>
+    <p>Generated 2012-01-18 19:02:52 -0500</p>
+    <div class='rounded centered'>
+      Hello World!
+    </div>
   </body>
 </html>

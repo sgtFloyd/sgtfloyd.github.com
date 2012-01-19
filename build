@@ -3,5 +3,3 @@ do
   output="${haml_file:5}"
   `haml $haml_file ${output%aml}tml`
 done
-
-`git add .`

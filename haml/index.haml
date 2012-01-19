@@ -1,4 +1,5 @@
 -# Color Palette: Terra http://www.colourlovers.com/palette/292482/Terra
+- black = "#000000"
 - terra_terra = "#E8DDCB"     # Flesh Color
 - terra = "#CDB380"           # Tan
 - acqua = "#036564"           # Teal
@@ -6,8 +7,11 @@
 - abissio = "#031634"         # Darker Blue
 
 - background_color_top = acqua_profonda
-- background_color_bottom = '#101010'
+- background_color_bottom = black
 - font_color = terra_terra
+
+- div_width = 200
+- div_height = 200
 
 %html
   %head
@@ -21,5 +25,22 @@
           background: -moz-linear-gradient(center top, #{background_color_top} 0%, #{background_color_bottom} 100%)
           background-color: #{background_color_bottom}
 
+        .centered
+          position: absolute
+          top: 50%
+          left: 50%
+          width: #{div_width}px
+          height: #{div_height}px
+          margin-left: -#{div_width/2}px
+          margin-top: -#{div_height/2}px
+
+        .rounded
+          -moz-border-radius: 20px
+          -webkit-border-radius: 20px
+          -khtml-border-radius: 20px
+          border-radius: 20px
+
   %body
     %p="Generated #{Time.now}"
+    .rounded.centered
+      Hello World!
