@@ -3,3 +3,9 @@ do
   output="${haml_file:5}"
   `haml $haml_file ${output%aml}tml`
 done
+
+for sass_file in `find sass -name '*.sass'`
+do
+  output="${sass_file:5}"
+  `sass $sass_file ${output%sass}css`
+done

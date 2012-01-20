@@ -1,0 +1,127 @@
+// red: #861A1A
+// green: #156B15
+// blue: #105050
+
+// original blue: #2A8CE8
+
+$accent: #861A1A
+$complement: #2A8CE8
+
+$black: #000000
+$white: #FFFFFF
+$light_grey: #888888
+$dark_grey: #333333
+
+
+body
+  margin: 0
+  text-align: center
+  font-family: Helvetica, Arial, sans-serif
+  font-size: 16px
+
+a
+  color: $complement
+  &:hover
+    color: $accent
+
+.inner
+  width: 950px
+  margin: 0 auto
+  padding: 60px 0
+
+h2
+  font-family: 'Telex', sans-serif
+  font-size: 6em
+  margin: 20px 0
+  font-weight: normal
+
+h3
+  font-size: 3em
+  margin: 30px 0
+  font-weight: normal
+  line-height: 1.2em
+
+p
+  line-height: 1.6em
+  strong
+    font-weight: normal
+    color: $accent
+    font-size: 1.2em
+  .summary
+    font-weight: normal
+    color: $accent
+    font-size: 1.5em
+
+#about
+  background: $dark_grey
+  color: $light_grey
+  padding-top: 30px
+  position: relative
+  z-index: 1
+  h2
+    color: $white
+  a:hover
+    color: $white
+
+#web
+  background: $white
+  color: $dark_grey
+  -webkit-box-shadow: 0px 0px 40px 0px $black
+  -moz-box-shadow: 0px 0px 40px 0px $black
+  box-shadow: 0px 0px 40px 0px $black
+  position: relative
+  z-index: 3
+  h2
+    color: $accent  
+  a:hover
+    color: $accent
+
+#resume
+  background: $accent
+  color: $white
+  -webkit-box-shadow: 0px 0px 40px 0px $black
+  -moz-box-shadow: 0px 0px 40px 0px $black
+  box-shadow: 0px 0px 40px 0px $black
+  position: relative
+  z-index: 2
+  h2
+    color: $white
+  a:hover
+    color: $black
+  p
+    font-size: 1.4em
+
+#nav
+  background: rgb(0,0,0)
+  background: rgba(0,0,0,0.8)
+  position: fixed
+  z-index: 10
+  top: 15px
+  left: 0
+  width: 100%
+  .inner
+    padding: 10px 0
+  ul
+    list-style: none
+    text-align: center
+    color: $white
+    margin: 0
+    padding: 0
+    font-size: 1.5em
+  li
+    display: inline
+    margin: 0 20px
+    vertical-align: middle
+    a
+      color: $white
+      text-decoration: none
+      vertical-align: middle
+      &:hover
+        color: $accent
+
+#footer
+  background: $dark_grey
+  color: $light_grey
+  font-size: .7em
+  .inner
+    padding: 10px 0

@@ -1,4 +1,7 @@
+-# occupyflash.org occupyhtml.org occupyoldbrowsers.org
+
 -# Color Palette: Terra http://www.colourlovers.com/palette/292482/Terra
+-# TODO: import from config, dynamic color switcher
 - black = "#000000"
 - terra_terra = "#E8DDCB"     # Flesh Color
 - terra = "#CDB380"           # Tan
@@ -13,34 +16,76 @@
 - div_width = 200
 - div_height = 200
 
-%html
+:plain
+  <!DOCTYPE html>
+%html{ lang:'en' }
   %head
     %title sgtFloyd
-    
-    %style{ :type => "text/css" }
-      :sass
-        body
-          color: #{font_color}
-          background: -webkit-gradient( linear, left top, left bottom, color-stop(0, #{background_color_top}), color-stop(1.5, #{background_color_bottom}) )
-          background: -moz-linear-gradient(center top, #{background_color_top} 0%, #{background_color_bottom} 100%)
-          background-color: #{background_color_bottom}
+    %meta{"http-equiv"=>'Content-Type', content:'text/html;charset=UTF-8' }
+    %meta{ name:'description', content:'' }
+    %link{ rel:'shortcut icon', href:'favicon.png' }
 
-        .centered
-          position: absolute
-          top: 50%
-          left: 50%
-          width: #{div_width}px
-          height: #{div_height}px
-          margin-left: -#{div_width/2}px
-          margin-top: -#{div_height/2}px
-
-        .rounded
-          -moz-border-radius: 20px
-          -webkit-border-radius: 20px
-          -khtml-border-radius: 20px
-          border-radius: 20px
+    %link{ rel:'stylesheet', type:'text/css', href:'http://fonts.googleapis.com/css?family=Telex' }
+    %link{ rel:'stylesheet', type:'text/css', href:'style.css' }
 
   %body
-    %p="Generated #{Time.now}"
-    .rounded.centered
-      Hello World!
+    -# Nav Bar
+    #nav
+      .inner
+        %ul
+          %li
+            %a{ href:'#about', title:'About Me' } About Me
+          %li
+            %a{ href:'#web', title:'Web Presence' } Web Presence
+          %li
+            %a{ href:'#resume', title:'Resume' } Resume
+
+    -# About Me
+    #about
+      .inner
+        %h2 About Me
+        %p
+          Lorem ipsum dolor sit amet,
+          %a consectetur adipiscing elit.
+          Morbi porttitor lacus orci, ac posuere mi. Aenean interdum tortor at diam pellentesque cursus. Fusce mollis orci quis eros ultrices posuere. Vestibulum iaculis,
+          %a lacus sed varius rhoncus
+          , turpis metus accumsan dolor, ac fermentum augue dui sit amet mi. Praesent ornare rutrum ante non suscipit. Fusce lorem ipsum, fermentum quis mattis ut, interdum bibendum neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc.
+          Cras ante diam, venenatis
+          %a eget feugiat nec
+          , fermentum a massa. Pellentesque sit amet molestie ligula.
+
+    -# Web Presence
+    #web.shadowed
+      .inner
+        %h2 Web Presence
+        %p
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor lacus orci, ac posuere mi.
+          %a Aenean interdum
+          tortor at diam pellentesque cursus. Fusce mollis orci quis eros ultrices posuere. Vestibulum iaculis, lacus sed varius rhoncus, turpis metus accumsan dolor, ac fermentum augue dui sit amet mi. Praesent ornare rutrum ante non suscipit. Fusce lorem ipsum, fermentum quis mattis ut,
+          %a interdum bibendum
+          neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc. Cras ante diam, venenatis eget feugiat nec, fermentum a massa. Pellentesque sit amet molestie
+          %a ligula.
+        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor lacus orci, ac posuere mi. Aenean interdum tortor at diam pellentesque cursus. Fusce mollis orci quis eros ultrices posuere. Vestibulum iaculis, lacus sed varius rhoncus, turpis metus accumsan dolor, ac fermentum augue dui sit amet mi. Praesent ornare rutrum ante non suscipit. Fusce lorem ipsum, fermentum quis mattis ut, interdum bibendum neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc. Cras ante diam, venenatis eget feugiat nec, fermentum a massa. Pellentesque sit amet molestie ligula.
+
+    -# Resume
+    #resume.shadowed
+      .inner
+        %h2 Resume
+        %p
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor lacus orci, ac posuere mi.
+          %a Aenean interdum
+          tortor at diam pellentesque cursus. Fusce mollis orci quis eros ultrices posuere. Vestibulum iaculis, lacus sed varius rhoncus, turpis metus accumsan dolor, ac fermentum augue dui sit amet mi. Praesent ornare rutrum ante non suscipit. Fusce lorem ipsum, fermentum quis mattis ut, interdum bibendum neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc. Cras ante diam, venenatis eget feugiat nec, fermentum a massa. Pellentesque sit amet molestie ligula.
+        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor lacus orci, ac posuere mi. Aenean interdum tortor at diam pellentesque cursus. Fusce mollis orci quis eros ultrices posuere. Vestibulum iaculis, lacus sed varius rhoncus, turpis metus accumsan dolor, ac fermentum augue dui sit amet mi. Praesent ornare rutrum ante non suscipit. Fusce lorem ipsum, fermentum quis mattis ut, interdum bibendum neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc. Cras ante diam, venenatis eget feugiat nec, fermentum a massa. Pellentesque sit amet molestie ligula.
+        %p
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor lacus orci, ac posuere mi. Aenean interdum tortor at diam pellentesque cursus. Fusce mollis orci quis eros ultrices posuere.
+          %a Vestibulum iaculis, lacus sed varius rhoncus,
+          turpis metus accumsan dolor, ac fermentum augue dui sit amet mi. Praesent ornare rutrum ante non suscipit. Fusce lorem ipsum, fermentum quis mattis ut, interdum bibendum neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc. Cras ante diam, venenatis eget feugiat nec, fermentum a massa. Pellentesque sit amet molestie ligula.
+        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor lacus orci, ac posuere mi. Aenean interdum tortor at diam pellentesque cursus. Fusce mollis orci quis eros ultrices posuere. Vestibulum iaculis, lacus sed varius rhoncus, turpis metus accumsan dolor, ac fermentum augue dui sit amet mi. Praesent ornare rutrum ante non suscipit. Fusce lorem ipsum, fermentum quis mattis ut, interdum bibendum neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc. Cras ante diam, venenatis eget feugiat nec, fermentum a massa. Pellentesque sit amet molestie ligula.
+        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor lacus orci, ac posuere mi. Aenean interdum tortor at diam pellentesque cursus. Fusce mollis orci quis eros ultrices posuere. Vestibulum iaculis, lacus sed varius rhoncus, turpis metus accumsan dolor, ac fermentum augue dui sit amet mi. Praesent ornare rutrum ante non suscipit. Fusce lorem ipsum, fermentum quis mattis ut, interdum bibendum neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc. Cras ante diam, venenatis eget feugiat nec, fermentum a massa. Pellentesque sit amet molestie ligula.
+
+    -# Footer
+    #footer
+      .inner
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor lacus orci,
+        %a
+          ac posuere mi.
