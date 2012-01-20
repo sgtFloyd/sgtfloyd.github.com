@@ -110,3 +110,5 @@ p {
   font-size: 0.7em; }
   #footer .inner {
     padding: 10px 0; }
+  #footer a:hover {
+    color: white; }
