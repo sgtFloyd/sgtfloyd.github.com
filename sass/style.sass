@@ -4,8 +4,14 @@
 
 // original blue: #2A8CE8
 
-$accent: #861A1A
-$complement: #2A8CE8
+$red_accent: #861A1A
+$red_complement: #2A8CE8
+
+$green_accent: #105050
+$green_complement: #FFCA1E
+
+$purple_accent: #6B1546
+$purple_complement: #1BE9A1
 
 $black: #000000
 $white: #FFFFFF
@@ -18,10 +24,71 @@ body
   font-family: Helvetica, Arial, sans-serif
   font-size: 16px
 
-a
-  color: $complement
-  &:hover
-    color: $accent
+body.red
+  a
+    color: $red_complement
+    &:hover
+      color: $red_accent
+  p
+    strong
+      color: $red_accent
+    .summary
+      color: $red_accent
+  #web
+    h2
+      color: $red_accent  
+    a:hover
+      color: $red_accent
+  #resume
+    background: $red_accent
+  #nav
+    li
+      a:hover
+        color: $red_accent
+
+body.green
+  a
+    color: $green_complement
+    &:hover
+      color: $green_accent
+  p
+    strong
+      color: $green_accent
+    .summary
+      color: $green_accent
+  #web
+    h2
+      color: $green_accent  
+    a:hover
+      color: $green_accent
+  #resume
+    background: $green_accent
+  #nav
+    li
+      a:hover
+        color: $green_accent
+
+body.purple
+  a
+    color: $purple_complement
+    &:hover
+      color: $purple_accent
+  p
+    strong
+      color: $purple_accent
+    .summary
+      color: $purple_accent
+  #web
+    h2
+      color: $purple_accent  
+    a:hover
+      color: $purple_accent
+  #resume
+    background: $purple_accent
+  #nav
+    li
+      a:hover
+        color: $purple_accent
 
 .inner
   width: 950px
@@ -44,11 +111,9 @@ p
   line-height: 1.6em
   strong
     font-weight: normal
-    color: $accent
     font-size: 1.2em
   .summary
     font-weight: normal
-    color: $accent
     font-size: 1.5em
 
 #about
@@ -70,13 +135,8 @@ p
   box-shadow: 0px 0px 40px 0px $black
   position: relative
   z-index: 3
-  h2
-    color: $accent  
-  a:hover
-    color: $accent
 
 #resume
-  background: $accent
   color: $white
   -webkit-box-shadow: 0px 0px 40px 0px $black
   -moz-box-shadow: 0px 0px 40px 0px $black
@@ -115,8 +175,6 @@ p
       color: $white
       text-decoration: none
       vertical-align: middle
-      &:hover
-        color: $accent
 
 #footer
   background: $dark_grey

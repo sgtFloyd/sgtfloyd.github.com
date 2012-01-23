@@ -4,10 +4,56 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px; }
 
-a {
+body.red a {
   color: #2a8ce8; }
-  a:hover {
+  body.red a:hover {
     color: #861a1a; }
+body.red p strong {
+  color: #861a1a; }
+body.red p .summary {
+  color: #861a1a; }
+body.red #web h2 {
+  color: #861a1a; }
+body.red #web a:hover {
+  color: #861a1a; }
+body.red #resume {
+  background: #861a1a; }
+body.red #nav li a:hover {
+  color: #861a1a; }
+
+body.green a {
+  color: #ffca1e; }
+  body.green a:hover {
+    color: #105050; }
+body.green p strong {
+  color: #105050; }
+body.green p .summary {
+  color: #105050; }
+body.green #web h2 {
+  color: #105050; }
+body.green #web a:hover {
+  color: #105050; }
+body.green #resume {
+  background: #105050; }
+body.green #nav li a:hover {
+  color: #105050; }
+
+body.purple a {
+  color: #1be9a1; }
+  body.purple a:hover {
+    color: #6b1546; }
+body.purple p strong {
+  color: #6b1546; }
+body.purple p .summary {
+  color: #6b1546; }
+body.purple #web h2 {
+  color: #6b1546; }
+body.purple #web a:hover {
+  color: #6b1546; }
+body.purple #resume {
+  background: #6b1546; }
+body.purple #nav li a:hover {
+  color: #6b1546; }
 
 .inner {
   width: 950px;
@@ -30,11 +76,9 @@ p {
   line-height: 1.6em; }
   p strong {
     font-weight: normal;
-    color: #861a1a;
     font-size: 1.2em; }
   p .summary {
     font-weight: normal;
-    color: #861a1a;
     font-size: 1.5em; }
 
 #about {
@@ -56,13 +100,8 @@ p {
   box-shadow: 0px 0px 40px 0px black;
   position: relative;
   z-index: 3; }
-  #web h2 {
-    color: #861a1a; }
-  #web a:hover {
-    color: #861a1a; }
 
 #resume {
-  background: #861a1a;
   color: white;
   -webkit-box-shadow: 0px 0px 40px 0px black;
   -moz-box-shadow: 0px 0px 40px 0px black;
@@ -101,8 +140,6 @@ p {
       color: white;
       text-decoration: none;
       vertical-align: middle; }
-      #nav li a:hover {
-        color: #861a1a; }
 
 #footer {
   background: #333333;
