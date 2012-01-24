@@ -4,57 +4,6 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px; }
 
-body.red a {
-  color: #2a8ce8; }
-  body.red a:hover {
-    color: #861a1a; }
-body.red p strong {
-  color: #861a1a; }
-body.red p .summary {
-  color: #861a1a; }
-body.red #web h2 {
-  color: #861a1a; }
-body.red #web a:hover {
-  color: #861a1a; }
-body.red #resume {
-  background: #861a1a; }
-body.red #nav li a:hover {
-  color: #861a1a; }
-
-body.green a {
-  color: #ffca1e; }
-  body.green a:hover {
-    color: #105050; }
-body.green p strong {
-  color: #105050; }
-body.green p .summary {
-  color: #105050; }
-body.green #web h2 {
-  color: #105050; }
-body.green #web a:hover {
-  color: #105050; }
-body.green #resume {
-  background: #105050; }
-body.green #nav li a:hover {
-  color: #105050; }
-
-body.purple a {
-  color: #1be9a1; }
-  body.purple a:hover {
-    color: #6b1546; }
-body.purple p strong {
-  color: #6b1546; }
-body.purple p .summary {
-  color: #6b1546; }
-body.purple #web h2 {
-  color: #6b1546; }
-body.purple #web a:hover {
-  color: #6b1546; }
-body.purple #resume {
-  background: #6b1546; }
-body.purple #nav li a:hover {
-  color: #6b1546; }
-
 .inner {
   width: 950px;
   margin: 0 auto;
@@ -83,7 +32,7 @@ p {
 
 #about {
   background: #333333;
-  color: #888888;
+  color: #aaaaaa;
   padding-top: 30px;
   position: relative;
   z-index: 1; }
@@ -143,7 +92,7 @@ p {
 
 #footer {
   background: #333333;
-  color: #888888;
+  color: #aaaaaa;
   font-size: 0.7em; }
   #footer .inner {
     padding: 10px 0; }

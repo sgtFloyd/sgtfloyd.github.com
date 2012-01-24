@@ -1,20 +1,9 @@
--# occupyflash.org occupyhtml.org occupyoldbrowsers.org
-
--# Color Palette: Terra http://www.colourlovers.com/palette/292482/Terra
--# TODO: import from config, dynamic color switcher
-- black = "#000000"
-- terra_terra = "#E8DDCB"     # Flesh Color
-- terra = "#CDB380"           # Tan
-- acqua = "#036564"           # Teal
-- acqua_profonda = "#033649"  # Dark Blue
-- abissio = "#031634"         # Darker Blue
-
-- background_color_top = acqua_profonda
-- background_color_bottom = black
-- font_color = terra_terra
-
-- div_width = 200
-- div_height = 200
+:ruby
+  colors = {
+    red:    {main: "#861A1A", accent: "#2A8CE8"},
+    green:  {main: "#105050", accent: "#FFCA1E"},
+    purple: {main: "#6B1546", accent: "#1BE9A1"}
+  }
 
 :plain
   <!DOCTYPE html>
@@ -28,7 +17,33 @@
     %link{ rel:'stylesheet', type:'text/css', href:'http://fonts.googleapis.com/css?family=Telex' }
     %link{ rel:'stylesheet', type:'text/css', href:'style.css' }
 
-  %body.green
+    / Color Theme Support
+    %style{ :type => "text/css" }
+      - colors.keys.each do |color|
+        :sass
+          body.#{color}
+            a
+              color: #{colors[color][:accent]}
+              &:hover
+                color: #{colors[color][:main]}
+            p
+              strong
+                color: #{colors[color][:main]}
+              .summary
+                color: #{colors[color][:main]}
+            #web
+              h2
+                color: #{colors[color][:main]} 
+              a:hover
+                color: #{colors[color][:main]}
+            #resume
+              background: #{colors[color][:main]}
+            #nav
+              li
+                a:hover
+                  color: #{colors[color][:main]}
+
+  %body.red
     -# Nav Bar
     #nav
       .inner
