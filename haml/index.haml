@@ -17,8 +17,10 @@
     %link{ rel:'stylesheet', type:'text/css', href:'http://fonts.googleapis.com/css?family=Telex' }
     %link{ rel:'stylesheet', type:'text/css', href:'style.css' }
 
-    / Color Theme Support
-    %style{ :type => "text/css" }
+    %script{ src:'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js', type:'text/javascript' }
+
+    / Color Theme Styles
+    %style{ type:'text/css' }
       - colors.keys.each do |color|
         :sass
           body.#{color}
@@ -43,7 +45,19 @@
                 a:hover
                   color: #{colors[color][:main]}
 
-  %body.red
+    / Color Theme Switching
+    %script{ type:'text/javascript' }
+      :plain
+        $(document).ready(function() {
+      - colors.keys.each do |color|
+        :plain
+            $('##{color}').click(function() {
+              $(document.body).attr('class', '#{color}')
+            });
+      :plain
+        });
+
+  %body{ class: colors.keys.first }
     -# Nav Bar
     #nav
       .inner
@@ -54,6 +68,11 @@
             %a{ href:'#web', title:'Web Presence' } Web Presence
           %li
             %a{ href:'#resume', title:'Resume' } Resume
+      .colors
+        %ul
+          - colors.keys.each do |color|
+            %li
+              %a{ id: color, href:'javascript:', style:"background:#{colors[color][:main]}" }
 
     -# About Me
     #about

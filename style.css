@@ -71,9 +71,8 @@ p {
   z-index: 10;
   top: 15px;
   left: 0;
+  height: 52px;
   width: 100%; }
-  #nav .inner {
-    padding: 10px 0; }
   #nav ul {
     list-style: none;
     text-align: center;
@@ -83,12 +82,31 @@ p {
     font-size: 1.5em; }
   #nav li {
     display: inline;
-    margin: 0 20px;
     vertical-align: middle; }
     #nav li a {
       color: white;
       text-decoration: none;
       vertical-align: middle; }
+  #nav .inner {
+    height: 32px;
+    padding: 10px 0; }
+    #nav .inner li {
+      margin: 0 20px; }
+  #nav .colors {
+    position: absolute;
+    z-index: 11;
+    top: 0;
+    right: 0;
+    padding: 10px; }
+    #nav .colors a {
+      border: 2px solid black;
+      float: left;
+      margin: 0 5px;
+      display: block;
+      height: 28px;
+      width: 28px; }
+      #nav .colors a:hover {
+        border: 2px solid #aaaaaa; }
 
 #footer {
   background: #333333;

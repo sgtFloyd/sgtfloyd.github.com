@@ -7,7 +7,8 @@
     <link href='favicon.png' rel='shortcut icon' />
     <link href='http://fonts.googleapis.com/css?family=Telex' rel='stylesheet' type='text/css' />
     <link href='style.css' rel='stylesheet' type='text/css' />
-    <!-- Color Theme Support -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js' type='text/javascript'></script>
+    <!-- Color Theme Styles -->
     <style type='text/css'>
       body.red a {
         color: #2a8ce8; }
@@ -58,6 +59,20 @@
       body.purple #nav li a:hover {
         color: #6b1546; }
     </style>
+    <!-- Color Theme Switching -->
+    <script type='text/javascript'>
+      $(document).ready(function() {
+        $('#red').click(function() {
+          $(document.body).attr('class', 'red')
+        });
+        $('#green').click(function() {
+          $(document.body).attr('class', 'green')
+        });
+        $('#purple').click(function() {
+          $(document.body).attr('class', 'purple')
+        });
+      });
+    </script>
   </head>
   <body class='red'>
     <div id='nav'>
@@ -71,6 +86,19 @@
           </li>
           <li>
             <a href='#resume' title='Resume'>Resume</a>
+          </li>
+        </ul>
+      </div>
+      <div class='colors'>
+        <ul>
+          <li>
+            <a href='javascript:' id='red' style='background:#861A1A'></a>
+          </li>
+          <li>
+            <a href='javascript:' id='green' style='background:#105050'></a>
+          </li>
+          <li>
+            <a href='javascript:' id='purple' style='background:#6B1546'></a>
           </li>
         </ul>
       </div>
