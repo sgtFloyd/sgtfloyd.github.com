@@ -3,6 +3,10 @@ $white: #FFFFFF
 $light_grey: #AAAAAA
 $dark_grey: #333333
 
+$color_box_size: 28px
+$color_border_width: 2px
+$nav_offest: 0-(($color_box_size+(2*$color_border_width))/2)
+
 body
   margin: 0
   text-align: center
@@ -76,7 +80,6 @@ p
   z-index: 10
   top: 15px
   left: 0
-  height: 52px
   width: 100%
   ul
     list-style: none
@@ -88,30 +91,29 @@ p
   li
     display: inline
     vertical-align: middle
+    margin: 0 20px
+    font-family: 'Telex', sans-serif
     a
       color: $white
       text-decoration: none
       vertical-align: middle
   .inner
-    height: 32px
     padding: 10px 0
-    li
-      margin: 0 20px
   .colors
     position: absolute
     z-index: 11
-    top: 0
+    top: 50%
+    margin-top: $nav_offest
     right: 0
-    padding: 10px
     a
       &:hover
-        border: 2px solid $light_grey
-      border: 2px solid $black
+        border: $color_border_width solid $light_grey
+      border: $color_border_width solid $black
       float: left
       margin: 0 5px
       display: block
-      height: 28px
-      width: 28px
+      height: $color_box_size
+      width: $color_box_size
 
 #footer
   background: $dark_grey
