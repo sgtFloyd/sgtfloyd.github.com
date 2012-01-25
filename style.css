@@ -81,7 +81,7 @@ p {
       height: 28px;
       width: 28px; }
       #nav .colors a:hover {
-        border: 2px solid #303030; }
+        border: 2px solid; }
 
 #footer {
   font-size: 0.7em; }
