@@ -1,8 +1,14 @@
 :ruby
+  dark = "#303030"
+  light = "#FEFEFE"
+  # accent colors
+    acqua = "#036564" # colourlovers.com/palette/292482
+    creep = "#D6156C" # colourlovers.com/palette/663167
+    shirt = "#CBE86B" # colourlovers.com/palette/359978
+
   colors = {
-    red:    {main: "#861A1A", accent: "#2A8CE8"},
-    green:  {main: "#105050", accent: "#FFCA1E"},
-    purple: {main: "#6B1546", accent: "#1BE9A1"}
+    white: {primary: light, secondary: dark, accent: creep},
+    black: {primary: dark, secondary: light, accent: creep}
   }
 
 :plain
@@ -22,28 +28,27 @@
     / Color Theme Styles
     %style{ type:'text/css' }
       - colors.keys.each do |color|
+        - primary, secondary, accent = colors[color].values
         :sass
           body.#{color}
+            background: #{primary}
             a
-              color: #{colors[color][:accent]}
-              &:hover
-                color: #{colors[color][:main]}
-            p
-              strong
-                color: #{colors[color][:main]}
-              .summary
-                color: #{colors[color][:main]}
-            #web
-              h2
-                color: #{colors[color][:main]} 
-              a:hover
-                color: #{colors[color][:main]}
-            #resume
-              background: #{colors[color][:main]}
+              color: #{accent}
             #nav
-              li
-                a:hover
-                  color: #{colors[color][:main]}
+              li a
+                color: white
+                &:hover
+                  color: #{accent}
+            #header, #footer
+              background: #{primary}
+              color: #{secondary}
+              a:hover
+                color: #{secondary}
+            #web
+              background: #{secondary}
+              color: #{primary}
+              a:hover
+                color: #{primary}
 
     / Color Theme Switching
     %script{ type:'text/javascript' }
@@ -66,16 +71,14 @@
             %a{ href:'#about', title:'About Me' } About Me
           %li
             %a{ href:'#web', title:'Web Presence' } Web Presence
-          %li
-            %a{ href:'#resume', title:'Resume' } Resume
       .colors
         %ul
           - colors.keys.each do |color|
             %li
-              %a{ id: color, href:'javascript:', style:"background:#{colors[color][:main]}" }
+              %a{ id: color, href:'javascript:', style:"background:#{colors[color][:primary]}" }
 
     -# About Me
-    #about
+    #header
       .inner
         %h2 About Me
         %p
@@ -99,22 +102,6 @@
           %a interdum bibendum
           neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc. Cras ante diam, venenatis eget feugiat nec, fermentum a massa. Pellentesque sit amet molestie
           %a ligula.
-        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor lacus orci, ac posuere mi. Aenean interdum tortor at diam pellentesque cursus. Fusce mollis orci quis eros ultrices posuere. Vestibulum iaculis, lacus sed varius rhoncus, turpis metus accumsan dolor, ac fermentum augue dui sit amet mi. Praesent ornare rutrum ante non suscipit. Fusce lorem ipsum, fermentum quis mattis ut, interdum bibendum neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc. Cras ante diam, venenatis eget feugiat nec, fermentum a massa. Pellentesque sit amet molestie ligula.
-
-    -# Resume
-    #resume
-      .inner
-        %h2 Resume
-        %p
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor lacus orci, ac posuere mi.
-          %a Aenean interdum
-          tortor at diam pellentesque cursus. Fusce mollis orci quis eros ultrices posuere. Vestibulum iaculis, lacus sed varius rhoncus, turpis metus accumsan dolor, ac fermentum augue dui sit amet mi. Praesent ornare rutrum ante non suscipit. Fusce lorem ipsum, fermentum quis mattis ut, interdum bibendum neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc. Cras ante diam, venenatis eget feugiat nec, fermentum a massa. Pellentesque sit amet molestie ligula.
-        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor lacus orci, ac posuere mi. Aenean interdum tortor at diam pellentesque cursus. Fusce mollis orci quis eros ultrices posuere. Vestibulum iaculis, lacus sed varius rhoncus, turpis metus accumsan dolor, ac fermentum augue dui sit amet mi. Praesent ornare rutrum ante non suscipit. Fusce lorem ipsum, fermentum quis mattis ut, interdum bibendum neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc. Cras ante diam, venenatis eget feugiat nec, fermentum a massa. Pellentesque sit amet molestie ligula.
-        %p
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor lacus orci, ac posuere mi. Aenean interdum tortor at diam pellentesque cursus. Fusce mollis orci quis eros ultrices posuere.
-          %a Vestibulum iaculis, lacus sed varius rhoncus,
-          turpis metus accumsan dolor, ac fermentum augue dui sit amet mi. Praesent ornare rutrum ante non suscipit. Fusce lorem ipsum, fermentum quis mattis ut, interdum bibendum neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc. Cras ante diam, venenatis eget feugiat nec, fermentum a massa. Pellentesque sit amet molestie ligula.
-        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor lacus orci, ac posuere mi. Aenean interdum tortor at diam pellentesque cursus. Fusce mollis orci quis eros ultrices posuere. Vestibulum iaculis, lacus sed varius rhoncus, turpis metus accumsan dolor, ac fermentum augue dui sit amet mi. Praesent ornare rutrum ante non suscipit. Fusce lorem ipsum, fermentum quis mattis ut, interdum bibendum neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc. Cras ante diam, venenatis eget feugiat nec, fermentum a massa. Pellentesque sit amet molestie ligula.
         %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor lacus orci, ac posuere mi. Aenean interdum tortor at diam pellentesque cursus. Fusce mollis orci quis eros ultrices posuere. Vestibulum iaculis, lacus sed varius rhoncus, turpis metus accumsan dolor, ac fermentum augue dui sit amet mi. Praesent ornare rutrum ante non suscipit. Fusce lorem ipsum, fermentum quis mattis ut, interdum bibendum neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc. Cras ante diam, venenatis eget feugiat nec, fermentum a massa. Pellentesque sit amet molestie ligula.
 
     -# Footer

@@ -30,39 +30,17 @@ p {
     font-weight: normal;
     font-size: 1.5em; }
 
-#about {
-  background: #333333;
-  color: #aaaaaa;
+#header {
   padding-top: 30px;
   position: relative;
   z-index: 1; }
-  #about h2 {
-    color: white; }
-  #about a:hover {
-    color: white; }
 
 #web {
-  background: white;
-  color: #333333;
   -webkit-box-shadow: 0px 0px 40px 0px black;
   -moz-box-shadow: 0px 0px 40px 0px black;
   box-shadow: 0px 0px 40px 0px black;
   position: relative;
   z-index: 3; }
-
-#resume {
-  color: white;
-  -webkit-box-shadow: 0px 0px 40px 0px black;
-  -moz-box-shadow: 0px 0px 40px 0px black;
-  box-shadow: 0px 0px 40px 0px black;
-  position: relative;
-  z-index: 2; }
-  #resume h2 {
-    color: white; }
-  #resume a:hover {
-    color: black; }
-  #resume p {
-    font-size: 1.4em; }
 
 #nav {
   background: black;
@@ -75,7 +53,7 @@ p {
   #nav ul {
     list-style: none;
     text-align: center;
-    color: white;
+    color: gray;
     margin: 0;
     padding: 0;
     font-size: 1.5em; }
@@ -85,7 +63,6 @@ p {
     margin: 0 20px;
     font-family: "Telex", sans-serif; }
     #nav li a {
-      color: white;
       text-decoration: none;
       vertical-align: middle; }
   #nav .inner {
@@ -104,13 +81,9 @@ p {
       height: 28px;
       width: 28px; }
       #nav .colors a:hover {
-        border: 2px solid #aaaaaa; }
+        border: 2px solid #303030; }
 
 #footer {
-  background: #333333;
-  color: #aaaaaa;
   font-size: 0.7em; }
   #footer .inner {
     padding: 10px 0; }
-  #footer a:hover {
-    color: white; }

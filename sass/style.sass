@@ -1,8 +1,3 @@
-$black: #000000
-$white: #FFFFFF
-$light_grey: #AAAAAA
-$dark_grey: #333333
-
 $color_box_size: 28px
 $color_border_width: 2px
 $nav_offest: 0-(($color_box_size+(2*$color_border_width))/2)
@@ -39,39 +34,17 @@ p
     font-weight: normal
     font-size: 1.5em
 
-#about
-  background: $dark_grey
-  color: $light_grey
+#header
   padding-top: 30px
   position: relative
   z-index: 1
-  h2
-    color: $white
-  a:hover
-    color: $white
 
 #web
-  background: $white
-  color: $dark_grey
-  -webkit-box-shadow: 0px 0px 40px 0px $black
-  -moz-box-shadow: 0px 0px 40px 0px $black
-  box-shadow: 0px 0px 40px 0px $black
+  -webkit-box-shadow: 0px 0px 40px 0px black
+  -moz-box-shadow: 0px 0px 40px 0px black
+  box-shadow: 0px 0px 40px 0px black
   position: relative
   z-index: 3
-
-#resume
-  color: $white
-  -webkit-box-shadow: 0px 0px 40px 0px $black
-  -moz-box-shadow: 0px 0px 40px 0px $black
-  box-shadow: 0px 0px 40px 0px $black
-  position: relative
-  z-index: 2
-  h2
-    color: $white
-  a:hover
-    color: $black
-  p
-    font-size: 1.4em
 
 #nav
   background: rgb(0,0,0)
@@ -84,7 +57,7 @@ p
   ul
     list-style: none
     text-align: center
-    color: $white
+    color: rgb(128,128,128)
     margin: 0
     padding: 0
     font-size: 1.5em
@@ -94,7 +67,6 @@ p
     margin: 0 20px
     font-family: 'Telex', sans-serif
     a
-      color: $white
       text-decoration: none
       vertical-align: middle
   .inner
@@ -107,8 +79,8 @@ p
     right: 0
     a
       &:hover
-        border: $color_border_width solid $light_grey
-      border: $color_border_width solid $black
+        border: $color_border_width solid #303030
+      border: $color_border_width solid rgb(0,0,0)
       float: left
       margin: 0 5px
       display: block
@@ -116,10 +88,6 @@ p
       width: $color_box_size
 
 #footer
-  background: $dark_grey
-  color: $light_grey
   font-size: .7em
   .inner
     padding: 10px 0
-  a:hover
-    color: $white

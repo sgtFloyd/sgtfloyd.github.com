@@ -10,71 +10,56 @@
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js' type='text/javascript'></script>
     <!-- Color Theme Styles -->
     <style type='text/css'>
-      body.red a {
-        color: #2a8ce8; }
-        body.red a:hover {
-          color: #861a1a; }
-      body.red p strong {
-        color: #861a1a; }
-      body.red p .summary {
-        color: #861a1a; }
-      body.red #web h2 {
-        color: #861a1a; }
-      body.red #web a:hover {
-        color: #861a1a; }
-      body.red #resume {
-        background: #861a1a; }
-      body.red #nav li a:hover {
-        color: #861a1a; }
-      body.green a {
-        color: #ffca1e; }
-        body.green a:hover {
-          color: #105050; }
-      body.green p strong {
-        color: #105050; }
-      body.green p .summary {
-        color: #105050; }
-      body.green #web h2 {
-        color: #105050; }
-      body.green #web a:hover {
-        color: #105050; }
-      body.green #resume {
-        background: #105050; }
-      body.green #nav li a:hover {
-        color: #105050; }
-      body.purple a {
-        color: #1be9a1; }
-        body.purple a:hover {
-          color: #6b1546; }
-      body.purple p strong {
-        color: #6b1546; }
-      body.purple p .summary {
-        color: #6b1546; }
-      body.purple #web h2 {
-        color: #6b1546; }
-      body.purple #web a:hover {
-        color: #6b1546; }
-      body.purple #resume {
-        background: #6b1546; }
-      body.purple #nav li a:hover {
-        color: #6b1546; }
+      body.white {
+        background: #fefefe; }
+        body.white a {
+          color: #d6156c; }
+        body.white #nav li a {
+          color: white; }
+          body.white #nav li a:hover {
+            color: #d6156c; }
+        body.white #header, body.white #footer {
+          background: #fefefe;
+          color: #303030; }
+          body.white #header a:hover, body.white #footer a:hover {
+            color: #303030; }
+        body.white #web {
+          background: #303030;
+          color: #fefefe; }
+          body.white #web a:hover {
+            color: #fefefe; }
+      body.black {
+        background: #303030; }
+        body.black a {
+          color: #d6156c; }
+        body.black #nav li a {
+          color: white; }
+          body.black #nav li a:hover {
+            color: #d6156c; }
+        body.black #header, body.black #footer {
+          background: #303030;
+          color: #fefefe; }
+          body.black #header a:hover, body.black #footer a:hover {
+            color: #fefefe; }
+        body.black #web {
+          background: #fefefe;
+          color: #303030; }
+          body.black #web a:hover {
+            color: #303030; }
     </style>
     <!-- Color Theme Switching -->
     <script type='text/javascript'>
       $(document).ready(function() {
-        $('#red').click(function() {
-          $(document.body).attr('class', 'red')
+        $('#white').click(function() {
+          $(document.body).attr('class', 'white')
         });
-        $('#green').click(function() {
-          $(document.body).attr('class', 'green')
-        });
-        $('#purple').click(function() {
-          $(document.body).attr('class', 'purple')
+        $('#black').click(function() {
+          $(document.body).attr('class', 'black')
         });
       });
     </script>
   </head>
-  <body class='red'>
+  <body class='white'>
     <div id='nav'>
       <div class='inner'>
         <ul>
@@ -84,26 +69,20 @@
           <li>
             <a href='#web' title='Web Presence'>Web Presence</a>
           </li>
-          <li>
-            <a href='#resume' title='Resume'>Resume</a>
-          </li>
         </ul>
       </div>
       <div class='colors'>
         <ul>
           <li>
-            <a href='javascript:' id='red' style='background:#861A1A'></a>
+            <a href='javascript:' id='white' style='background:#FEFEFE'></a>
           </li>
           <li>
-            <a href='javascript:' id='green' style='background:#105050'></a>
-          </li>
-          <li>
-            <a href='javascript:' id='purple' style='background:#6B1546'></a>
+            <a href='javascript:' id='black' style='background:#303030'></a>
           </li>
         </ul>
       </div>
     </div>
-    <div id='about'>
+    <div id='header'>
       <div class='inner'>
         <h2>About Me</h2>
         <p>
@@ -129,24 +108,6 @@
           neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc. Cras ante diam, venenatis eget feugiat nec, fermentum a massa. Pellentesque sit amet molestie
           <a>ligula.</a>
         </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor lacus orci, ac posuere mi. Aenean interdum tortor at diam pellentesque cursus. Fusce mollis orci quis eros ultrices posuere. Vestibulum iaculis, lacus sed varius rhoncus, turpis metus accumsan dolor, ac fermentum augue dui sit amet mi. Praesent ornare rutrum ante non suscipit. Fusce lorem ipsum, fermentum quis mattis ut, interdum bibendum neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc. Cras ante diam, venenatis eget feugiat nec, fermentum a massa. Pellentesque sit amet molestie ligula.</p>
-      </div>
-    </div>
-    <div id='resume'>
-      <div class='inner'>
-        <h2>Resume</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor lacus orci, ac posuere mi.
-          <a>Aenean interdum</a>
-          tortor at diam pellentesque cursus. Fusce mollis orci quis eros ultrices posuere. Vestibulum iaculis, lacus sed varius rhoncus, turpis metus accumsan dolor, ac fermentum augue dui sit amet mi. Praesent ornare rutrum ante non suscipit. Fusce lorem ipsum, fermentum quis mattis ut, interdum bibendum neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc. Cras ante diam, venenatis eget feugiat nec, fermentum a massa. Pellentesque sit amet molestie ligula.
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor lacus orci, ac posuere mi. Aenean interdum tortor at diam pellentesque cursus. Fusce mollis orci quis eros ultrices posuere. Vestibulum iaculis, lacus sed varius rhoncus, turpis metus accumsan dolor, ac fermentum augue dui sit amet mi. Praesent ornare rutrum ante non suscipit. Fusce lorem ipsum, fermentum quis mattis ut, interdum bibendum neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc. Cras ante diam, venenatis eget feugiat nec, fermentum a massa. Pellentesque sit amet molestie ligula.</p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor lacus orci, ac posuere mi. Aenean interdum tortor at diam pellentesque cursus. Fusce mollis orci quis eros ultrices posuere.
-          <a>Vestibulum iaculis, lacus sed varius rhoncus,</a>
-          turpis metus accumsan dolor, ac fermentum augue dui sit amet mi. Praesent ornare rutrum ante non suscipit. Fusce lorem ipsum, fermentum quis mattis ut, interdum bibendum neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc. Cras ante diam, venenatis eget feugiat nec, fermentum a massa. Pellentesque sit amet molestie ligula.
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor lacus orci, ac posuere mi. Aenean interdum tortor at diam pellentesque cursus. Fusce mollis orci quis eros ultrices posuere. Vestibulum iaculis, lacus sed varius rhoncus, turpis metus accumsan dolor, ac fermentum augue dui sit amet mi. Praesent ornare rutrum ante non suscipit. Fusce lorem ipsum, fermentum quis mattis ut, interdum bibendum neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc. Cras ante diam, venenatis eget feugiat nec, fermentum a massa. Pellentesque sit amet molestie ligula.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor lacus orci, ac posuere mi. Aenean interdum tortor at diam pellentesque cursus. Fusce mollis orci quis eros ultrices posuere. Vestibulum iaculis, lacus sed varius rhoncus, turpis metus accumsan dolor, ac fermentum augue dui sit amet mi. Praesent ornare rutrum ante non suscipit. Fusce lorem ipsum, fermentum quis mattis ut, interdum bibendum neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc. Cras ante diam, venenatis eget feugiat nec, fermentum a massa. Pellentesque sit amet molestie ligula.</p>
       </div>
     </div>
