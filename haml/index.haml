@@ -1,14 +1,13 @@
 :ruby
   dark = "#303030"
   light = "#FEFEFE"
-  # accent colors
-    acqua = "#036564" # colourlovers.com/palette/292482
-    creep = "#D6156C" # colourlovers.com/palette/663167
-    shirt = "#CBE86B" # colourlovers.com/palette/359978
+
+  # accents
+  funk = "#F02475"  # colourlovers.com/palette/522000
 
   colors = {
-    white: {primary: light, secondary: dark, accent: creep},
-    black: {primary: dark, secondary: light, accent: creep}
+    white: {primary: light, secondary: dark, accent: funk},
+    black: {primary: dark, secondary: light, accent: funk}
   }
 
 :plain
@@ -42,7 +41,7 @@
               .colors
                 a:hover
                   border-color: #{accent}
-            #header, #footer
+            #about, #footer
               background: #{primary}
               color: #{secondary}
               a:hover
@@ -81,7 +80,7 @@
               %a{ id: color, href:'javascript:', style:"background:#{colors[color][:primary]}" }
 
     -# About Me
-    #header
+    #about
       .inner
         %h2 About Me
         %p
