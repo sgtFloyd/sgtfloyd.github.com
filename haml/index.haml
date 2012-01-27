@@ -1,13 +1,45 @@
-:ruby
-  dark = "#303030"
-  light = "#FEFEFE"
+-# see: http://icondock.com/free/vector-social-media-icons
 
-  # accents
+:ruby
+  dark = "#303030"; light = "#FEFEFE"
   funk = "#F02475"  # colourlovers.com/palette/522000
 
   colors = {
     white: {primary: light, secondary: dark, accent: funk},
     black: {primary: dark, secondary: light, accent: funk}
+  }
+
+  def trim(url)
+    ['http://', 'https://', 'www.'].map(&:reverse).each {|to_trim|
+      url = url.reverse.chomp(to_trim).reverse }; url.chomp('/')
+  end
+
+  link_columns = 2
+  links = {
+    github: { title: 'GitHub',
+      url: 'https://github.com/sgtFloyd',
+      ico: '' },
+    stackoverflow: { title: 'Stack Overflow',
+      url: 'http://stackoverflow.com/users/261152/sgtFloyd',
+      ico: '' },
+    steam: { title: 'Steam',
+      url: 'http://steamcommunity.com/id/sgtFloyd',
+      ico: '' },
+    xboxlive: { title: 'Xbox Live',
+      url: 'http://live.xbox.com/Profile?gamertag=sgtFlydPepper',
+      ico: '' },
+    lastfm: { title: 'Last.fm',
+      url: 'http://www.last.fm/user/stickynips',
+      ico: '' },
+    linkedin: { title: 'LinkedIn',
+      url: 'http://www.linkedin.com/in/sgtFloyd',
+      ico: '' },
+    facebook: { title: 'Facebook',
+      url: 'https://www.facebook.com/sgtFloyd',
+      ico: '' },
+    tumblr: { title: 'Tumblr',
+      url: 'http://sgtfloyd.tumblr.com',
+      ico: '' }
   }
 
 :plain
@@ -24,8 +56,13 @@
 
     %script{ src:'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js', type:'text/javascript' }
 
-    / Color Theme Styles
+    / dynamically generated styles
     %style{ type:'text/css' }
+      :sass
+        #web
+          .column
+            width: #{100.0/link_columns}%
+
       - colors.keys.each do |color|
         - primary, secondary, accent = colors[color].values
         :sass
@@ -34,10 +71,8 @@
             a
               color: #{accent}
             #nav
-              li a
-                color: white
-                &:hover
-                  color: #{accent}
+              li a:hover
+                color: #{accent}
               .colors
                 a:hover
                   border-color: #{accent}
@@ -51,8 +86,13 @@
               color: #{primary}
               a:hover
                 color: #{primary}
+              #links
+                border-color: #{primary}
+                a
+                  color: #{primary}
+                  &:hover
+                    color: #{accent}
 
-    / Color Theme Switching
     %script{ type:'text/javascript' }
       :plain
         $(document).ready(function() {
@@ -74,10 +114,8 @@
           %li
             %a{ href:'#web', title:'Web Presence' } Web Presence
       .colors
-        %ul
-          - colors.keys.each do |color|
-            %li
-              %a{ id: color, href:'javascript:', style:"background:#{colors[color][:primary]}" }
+        - colors.keys.each do |color|
+          %a{ id: color, href:'javascript:', style:"background:#{colors[color][:primary]}" }
 
     -# About Me
     #about
@@ -97,18 +135,20 @@
     #web
       .inner
         %h2 Web Presence
-        %p
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor lacus orci, ac posuere mi.
-          %a Aenean interdum
-          tortor at diam pellentesque cursus. Fusce mollis orci quis eros ultrices posuere. Vestibulum iaculis, lacus sed varius rhoncus, turpis metus accumsan dolor, ac fermentum augue dui sit amet mi. Praesent ornare rutrum ante non suscipit. Fusce lorem ipsum, fermentum quis mattis ut,
-          %a interdum bibendum
-          neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc. Cras ante diam, venenatis eget feugiat nec, fermentum a massa. Pellentesque sit amet molestie
-          %a ligula.
-        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor lacus orci, ac posuere mi. Aenean interdum tortor at diam pellentesque cursus. Fusce mollis orci quis eros ultrices posuere. Vestibulum iaculis, lacus sed varius rhoncus, turpis metus accumsan dolor, ac fermentum augue dui sit amet mi. Praesent ornare rutrum ante non suscipit. Fusce lorem ipsum, fermentum quis mattis ut, interdum bibendum neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc. Cras ante diam, venenatis eget feugiat nec, fermentum a massa. Pellentesque sit amet molestie ligula.
-
+        #links
+          - links_per_column = (links.size.to_f/link_columns).ceil
+          - links.each_slice(links_per_column).with_index do |slice, index|
+            .column{ class: index==link_columns-1 ? 'last' : nil }
+              %ul
+                - slice.each do |site, data|
+                  %li
+                    %h3
+                      %a{ href: data[:url] }= data[:title]
+          .clear
     -# Footer
     #footer
       .inner
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor lacus orci,
-        %a
-          ac posuere mi.
+        Copyright &copy 2011 Gabe Smith - Powered by
+        %a{ href: 'http://pages.github.com/', title: 'GitHub Pages' } GitHub Pages
+        ="-"
+        %a{ href: 'https://github.com/sgtFloyd/sgtfloyd.github.com', title: 'View Source' } View Source

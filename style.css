@@ -16,19 +16,20 @@ h2 {
   font-weight: normal; }
 
 h3 {
-  font-size: 3em;
-  margin: 30px 0;
-  font-weight: normal;
-  line-height: 1.2em; }
+  font-size: 32px;
+  font-weight: normal; }
 
 p {
   line-height: 1.6em; }
-  p strong {
-    font-weight: normal;
-    font-size: 1.2em; }
-  p .summary {
-    font-weight: normal;
-    font-size: 1.5em; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none; }
+
+.clear {
+  clear: both; }
 
 #about {
   padding-top: 30px;
@@ -40,7 +41,19 @@ p {
   -moz-box-shadow: 0px 0px 40px 0px black;
   box-shadow: 0px 0px 40px 0px black;
   position: relative;
-  z-index: 3; }
+  z-index: 2; }
+  #web #links {
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    border: 5px solid; }
+    #web #links ul {
+      text-align: left; }
+    #web #links .column {
+      display: block;
+      float: left; }
+    #web #links .last {
+      float: right; }
 
 #nav {
   background: black;
@@ -51,7 +64,6 @@ p {
   left: 0;
   width: 100%; }
   #nav ul {
-    list-style: none;
     text-align: center;
     color: gray;
     margin: 0;
@@ -63,7 +75,7 @@ p {
     margin: 0 20px;
     font-family: "Telex", sans-serif; }
     #nav li a {
-      text-decoration: none;
+      color: white;
       vertical-align: middle; }
   #nav .inner {
     padding: 10px 0; }
@@ -71,7 +83,7 @@ p {
     position: absolute;
     z-index: 11;
     top: 50%;
-    margin-top: -16px;
+    margin: -16px 20px;
     right: 0; }
     #nav .colors a {
       border: 2px solid black;
