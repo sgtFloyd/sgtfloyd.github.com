@@ -2,12 +2,13 @@
 -#      http://zocial.smcllns.com/sample.html
 
 :ruby
-  dark = "#303030"; light = "#FEFEFE"
-  funk = "#F02475"  # colourlovers.com/palette/522000
+  dark  = "#303030"
+  light = "#FEFEFE"
+  funk  = "#F02475"  # colourlovers.com/palette/522000
 
   colors = {
-    white: {primary: light, secondary: dark, accent: funk},
-    black: {primary: dark, secondary: light, accent: funk}
+    white: {primary: light, secondary: dark,  accent: funk},
+    black: {primary: dark,  secondary: light, accent: funk}
   }
 
   def trim(url)
@@ -15,32 +16,31 @@
       url = url.reverse.chomp(to_trim).reverse }; url.chomp('/')
   end
 
-  link_columns = 2
   links = {
     github: { title: 'GitHub',
       url: 'https://github.com/sgtFloyd',
-      ico: '' },
+      img: '' },
     stackoverflow: { title: 'Stack Overflow',
       url: 'http://stackoverflow.com/users/261152/sgtFloyd',
-      ico: '' },
+      img: '' },
     steam: { title: 'Steam',
       url: 'http://steamcommunity.com/id/sgtFloyd',
-      ico: '' },
+      img: '' },
     xboxlive: { title: 'Xbox Live',
-      url: 'http://live.xbox.com/Profile?gamertag=sgtFlydPepper',
-      ico: '' },
+      url: 'http://live.xbox.com/Profile?sgtFlydPepper',
+      img: '' },
     lastfm: { title: 'Last.fm',
       url: 'http://www.last.fm/user/stickynips',
-      ico: '' },
+      img: '' },
     linkedin: { title: 'LinkedIn',
       url: 'http://www.linkedin.com/in/sgtFloyd',
-      ico: '' },
+      img: '' },
     facebook: { title: 'Facebook',
       url: 'https://www.facebook.com/sgtFloyd',
-      ico: '' },
+      img: '' },
     tumblr: { title: 'Tumblr',
       url: 'http://sgtfloyd.tumblr.com',
-      ico: '' }
+      img: '' }
   }
 
 :plain
@@ -59,11 +59,6 @@
 
     / dynamically generated styles
     %style{ type:'text/css' }
-      :sass
-        #web
-          .column
-            width: #{100.0/link_columns}%
-
       - colors.keys.each do |color|
         - primary, secondary, accent = colors[color].values
         :sass
@@ -82,17 +77,11 @@
               color: #{secondary}
               a:hover
                 color: #{secondary}
-            #web
+            #projects
               background: #{secondary}
               color: #{primary}
               a:hover
                 color: #{primary}
-              #links
-                border-color: #{primary}
-                a
-                  color: #{primary}
-                  &:hover
-                    color: #{accent}
 
     %script{ type:'text/javascript' }
       :plain
@@ -113,13 +102,12 @@
           %li
             %a{ href:'#about', title:'About Me' } About Me
           %li
-            %a{ href:'#web', title:'Web Presence' } Web Presence
+            %a{ href:'#projects', title:'Projects' } Projects
       .colors
         - colors.keys.each do |color|
           %a{ id: color, href:'javascript:', style:"background:#{colors[color][:primary]}" }
 
-    -# About Me
-    #about
+    #about{style:'padding-top:30px;z-index:1'}
       .inner
         %h2 About Me
         %p
@@ -131,25 +119,40 @@
           Cras ante diam, venenatis
           %a eget feugiat nec
           , fermentum a massa. Pellentesque sit amet molestie ligula.
+        %p
+          Lorem ipsum dolor sit amet,
+          %a consectetur adipiscing elit.
+          Morbi porttitor lacus orci, ac posuere mi. Aenean interdum tortor at diam pellentesque cursus. Fusce mollis orci quis eros ultrices posuere. Vestibulum iaculis,
+          %a lacus sed varius rhoncus
+          , turpis metus accumsan dolor, ac fermentum augue dui sit amet mi. Praesent ornare rutrum ante non suscipit. Fusce lorem ipsum, fermentum quis mattis ut, interdum bibendum neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc.
+          Cras ante diam, venenatis
+          %a eget feugiat nec
+          , fermentum a massa. Pellentesque sit amet molestie ligula.
 
-    -# Web Presence
-    #web
+    #projects{style:'z-index:2'}
       .inner
-        %h2 Web Presence
-        #links
-          - links_per_column = (links.size.to_f/link_columns).ceil
-          - links.each_slice(links_per_column).with_index do |slice, index|
-            .column{ class: index==link_columns-1 ? 'last' : nil }
-              %ul
-                - slice.each do |site, data|
-                  %li
-                    %h3
-                      %a{ href: '' }= data[:title]
-          .clear
+        %h2 Projects
+        %p
+          Lorem ipsum dolor sit amet,
+          %a consectetur adipiscing elit.
+          Morbi porttitor lacus orci, ac posuere mi. Aenean interdum tortor at diam pellentesque cursus. Fusce mollis orci quis eros ultrices posuere. Vestibulum iaculis,
+          %a lacus sed varius rhoncus
+          , turpis metus accumsan dolor, ac fermentum augue dui sit amet mi. Praesent ornare rutrum ante non suscipit. Fusce lorem ipsum, fermentum quis mattis ut, interdum bibendum neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc.
+          Cras ante diam, venenatis
+          %a eget feugiat nec
+          , fermentum a massa. Pellentesque sit amet molestie ligula. Lorem ipsum dolor sit amet,
+          %a consectetur adipiscing elit.
+          Morbi porttitor lacus orci, ac posuere mi. Aenean interdum tortor at diam pellentesque cursus. Fusce mollis orci quis eros ultrices posuere. Vestibulum iaculis,
+          %a lacus sed varius rhoncus
+          , turpis metus accumsan dolor, ac fermentum augue dui sit amet mi. Praesent ornare rutrum ante non suscipit. Fusce lorem ipsum, fermentum quis mattis ut, interdum bibendum neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc.
+          Cras ante diam, venenatis
+          %a eget feugiat nec
+          , fermentum a massa. Pellentesque sit amet molestie ligula.
+
     -# Footer
-    #footer
+    #footer{style:'z-index:1'}
       .inner
-        Copyright &copy 2011 Gabe Smith - Powered by
+        Copyright &copy 2012 Gabe Smith - Powered by
         %a{ href: 'http://pages.github.com/', title: 'GitHub Pages' } GitHub Pages
         ="-"
         %a{ href: 'https://github.com/sgtFloyd/sgtfloyd.github.com', title: 'View Source' } View Source
