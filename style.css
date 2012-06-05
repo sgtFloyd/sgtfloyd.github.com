@@ -1,76 +1,13 @@
 body {
+  background: #303030;
+  color: #fefefe;
   margin: 0;
   text-align: center;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Averia Libre", sans-serif;
   font-size: 16px; }
   body a {
+    color: #f02475;
     text-decoration: none; }
-  body p {
-    line-height: 1.6em; }
-  body ul {
-    list-style: none;
-    padding: 0;
-    margin: 0; }
-
-h2 {
-  font-family: "Telex", sans-serif;
-  font-size: 6em;
-  margin: 20px 0;
-  font-weight: normal; }
-
-.inner {
-  width: 950px;
-  margin: 0 auto;
-  padding: 60px 0; }
-
-#nav {
-  background: black;
-  background: rgba(0, 0, 0, 0.8);
-  position: fixed;
-  z-index: 10;
-  top: 15px;
-  left: 0;
-  width: 100%; }
-  #nav ul {
-    text-align: center;
-    color: gray;
-    margin: 0;
-    padding: 0;
-    font-size: 1.5em; }
-  #nav li {
-    display: inline;
-    vertical-align: middle;
-    margin: 0 20px;
-    font-family: "Telex", sans-serif; }
-    #nav li a {
-      color: white;
-      vertical-align: middle; }
-  #nav .inner {
-    padding: 10px 0; }
-  #nav .colors {
-    position: absolute;
-    z-index: 11;
-    top: 50%;
-    margin: -16px 20px;
-    right: 0; }
-    #nav .colors a {
-      border: 2px solid black;
-      float: left;
-      margin: 0 5px;
-      display: block;
-      height: 28px;
-      width: 28px; }
-      #nav .colors a:hover {
-        border: 2px solid; }
-
-#about {
-  position: relative; }
-
-#projects {
-  -webkit-box-shadow: 0px 0px 40px 0px black;
-  -moz-box-shadow: 0px 0px 40px 0px black;
-  box-shadow: 0px 0px 40px 0px black;
-  position: relative; }
 
 #footer {
   font-size: 0.7em; }

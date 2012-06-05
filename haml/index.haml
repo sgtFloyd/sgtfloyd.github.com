@@ -1,47 +1,7 @@
--# see: http://icondock.com/free/vector-social-media-icons
--#      http://zocial.smcllns.com/sample.html
-
 :ruby
   dark  = "#303030"
   light = "#FEFEFE"
   funk  = "#F02475"  # colourlovers.com/palette/522000
-
-  colors = {
-    white: {primary: light, secondary: dark,  accent: funk},
-    black: {primary: dark,  secondary: light, accent: funk}
-  }
-
-  def trim(url)
-    ['http://', 'https://', 'www.'].map(&:reverse).each {|to_trim|
-      url = url.reverse.chomp(to_trim).reverse }; url.chomp('/')
-  end
-
-  links = {
-    github: { title: 'GitHub',
-      url: 'https://github.com/sgtFloyd',
-      img: '' },
-    stackoverflow: { title: 'Stack Overflow',
-      url: 'http://stackoverflow.com/users/261152/sgtFloyd',
-      img: '' },
-    steam: { title: 'Steam',
-      url: 'http://steamcommunity.com/id/sgtFloyd',
-      img: '' },
-    xboxlive: { title: 'Xbox Live',
-      url: 'http://live.xbox.com/Profile?sgtFlydPepper',
-      img: '' },
-    lastfm: { title: 'Last.fm',
-      url: 'http://www.last.fm/user/stickynips',
-      img: '' },
-    linkedin: { title: 'LinkedIn',
-      url: 'http://www.linkedin.com/in/sgtFloyd',
-      img: '' },
-    facebook: { title: 'Facebook',
-      url: 'https://www.facebook.com/sgtFloyd',
-      img: '' },
-    tumblr: { title: 'Tumblr',
-      url: 'http://sgtfloyd.tumblr.com',
-      img: '' }
-  }
 
 :plain
   <!DOCTYPE html>
@@ -52,105 +12,15 @@
     %meta{ name:'description', content:'' }
     %link{ rel:'shortcut icon', href:'favicon.png' }
 
-    %link{ rel:'stylesheet', type:'text/css', href:'http://fonts.googleapis.com/css?family=Telex' }
+    %link{ rel:'stylesheet', type:'text/css', href:'http://fonts.googleapis.com/css?family=Averia+Libre' }
     %link{ rel:'stylesheet', type:'text/css', href:'style.css' }
 
     %script{ src:'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js', type:'text/javascript' }
 
-    / dynamically generated styles
-    %style{ type:'text/css' }
-      - colors.keys.each do |color|
-        - primary, secondary, accent = colors[color].values
-        :sass
-          body.#{color}
-            background: #{primary}
-            a
-              color: #{accent}
-            #nav
-              li a:hover
-                color: #{accent}
-              .colors
-                a:hover
-                  border-color: #{accent}
-            #about, #footer
-              background: #{primary}
-              color: #{secondary}
-              a:hover
-                color: #{secondary}
-            #projects
-              background: #{secondary}
-              color: #{primary}
-              a:hover
-                color: #{primary}
-
-    %script{ type:'text/javascript' }
-      :plain
-        $(document).ready(function() {
-      - colors.keys.each do |color|
-        :plain
-            $('##{color}').click(function() {
-              $(document.body).attr('class', '#{color}')
-            });
-      :plain
-        });
-
-  %body{ class: colors.keys.first }
-    -# Nav Bar
-    #nav
-      .inner
-        %ul
-          %li
-            %a{ href:'#about', title:'About Me' } About Me
-          %li
-            %a{ href:'#projects', title:'Projects' } Projects
-      .colors
-        - colors.keys.each do |color|
-          %a{ id: color, href:'javascript:', style:"background:#{colors[color][:primary]}" }
-
-    #about{style:'padding-top:30px;z-index:1'}
-      .inner
-        %h2 About Me
-        %p
-          Lorem ipsum dolor sit amet,
-          %a consectetur adipiscing elit.
-          Morbi porttitor lacus orci, ac posuere mi. Aenean interdum tortor at diam pellentesque cursus. Fusce mollis orci quis eros ultrices posuere. Vestibulum iaculis,
-          %a lacus sed varius rhoncus
-          , turpis metus accumsan dolor, ac fermentum augue dui sit amet mi. Praesent ornare rutrum ante non suscipit. Fusce lorem ipsum, fermentum quis mattis ut, interdum bibendum neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc.
-          Cras ante diam, venenatis
-          %a eget feugiat nec
-          , fermentum a massa. Pellentesque sit amet molestie ligula.
-        %p
-          Lorem ipsum dolor sit amet,
-          %a consectetur adipiscing elit.
-          Morbi porttitor lacus orci, ac posuere mi. Aenean interdum tortor at diam pellentesque cursus. Fusce mollis orci quis eros ultrices posuere. Vestibulum iaculis,
-          %a lacus sed varius rhoncus
-          , turpis metus accumsan dolor, ac fermentum augue dui sit amet mi. Praesent ornare rutrum ante non suscipit. Fusce lorem ipsum, fermentum quis mattis ut, interdum bibendum neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc.
-          Cras ante diam, venenatis
-          %a eget feugiat nec
-          , fermentum a massa. Pellentesque sit amet molestie ligula.
-
-    #projects{style:'z-index:2'}
-      .inner
-        %h2 Projects
-        %p
-          Lorem ipsum dolor sit amet,
-          %a consectetur adipiscing elit.
-          Morbi porttitor lacus orci, ac posuere mi. Aenean interdum tortor at diam pellentesque cursus. Fusce mollis orci quis eros ultrices posuere. Vestibulum iaculis,
-          %a lacus sed varius rhoncus
-          , turpis metus accumsan dolor, ac fermentum augue dui sit amet mi. Praesent ornare rutrum ante non suscipit. Fusce lorem ipsum, fermentum quis mattis ut, interdum bibendum neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc.
-          Cras ante diam, venenatis
-          %a eget feugiat nec
-          , fermentum a massa. Pellentesque sit amet molestie ligula. Lorem ipsum dolor sit amet,
-          %a consectetur adipiscing elit.
-          Morbi porttitor lacus orci, ac posuere mi. Aenean interdum tortor at diam pellentesque cursus. Fusce mollis orci quis eros ultrices posuere. Vestibulum iaculis,
-          %a lacus sed varius rhoncus
-          , turpis metus accumsan dolor, ac fermentum augue dui sit amet mi. Praesent ornare rutrum ante non suscipit. Fusce lorem ipsum, fermentum quis mattis ut, interdum bibendum neque. Integer felis sem, aliquam eget fermentum vitae, pellentesque eu nunc.
-          Cras ante diam, venenatis
-          %a eget feugiat nec
-          , fermentum a massa. Pellentesque sit amet molestie ligula.
+  %body
 
     -# Footer
-    #footer{style:'z-index:1'}
+    #footer
       .inner
         Copyright &copy 2012 Gabe Smith - Powered by
         %a{ href: 'http://pages.github.com/', title: 'GitHub Pages' } GitHub Pages
