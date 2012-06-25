@@ -3,13 +3,30 @@ body {
   color: #fefefe;
   margin: 0;
   text-align: center;
-  font-family: "Averia Libre", sans-serif;
-  font-size: 16px; }
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-size: 300px; }
   body a {
-    color: #f02475;
+    color: #fefefe;
     text-decoration: none; }
+    body a:hover {
+      color: #f02475; }
 
-#footer {
-  font-size: 0.7em; }
-  #footer .inner {
-    padding: 10px 0; }
+#body {
+  line-height: 0.5em; }
+  #body .sgtfloyd {
+    color: #f02475;
+    line-height: 0.75em;
+    font-weight: 300;
+    text-align: left; }
+  #body .tumblr {
+    margin-left: -1em; }
+  #body .twitter {
+    margin-left: 1em; }
+  #body .small {
+    line-height: 0.5em;
+    font-size: 0.5em; }
+    #body .small .tchotchke {
+      margin-left: -2em; }
+    #body .small .freed {
+      margin-left: 2em; }
