@@ -12,28 +12,25 @@
     %meta{ name:'description', content:'' }
     %link{ rel:'shortcut icon', href:'favicon.png' }
 
-    %link{ rel:'stylesheet', type:'text/css', href:'http://fonts.googleapis.com/css?family=Lato:100,300' }
+    %link{ rel:'stylesheet', type:'text/css', href:'http://fonts.googleapis.com/css?family=Lato:100' }
     %link{ rel:'stylesheet', type:'text/css', href:'style.css' }
 
     -#%script{ src:'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js', type:'text/javascript' }
 
   %body
-
     #body
       .inner
-        .sgtfloyd sgtFloyd
-        %a.github{ href: 'http://github.com/sgtFloyd' } github
-        %br
-        %a.tumblr{ href: 'http://sgtfloyd.tumblr.com' } tumblr
-        %br
-        %a.twitter{ href: 'http://twitter.com/sgtFlyd' } twitter
-        %br
-        %br
-        -# .small
-        -#   %a.tchotchke{ href: 'http://tchotchke.herokuapp.com' } tchotchke
-        -#   %br
-        -#   %a.freed{ href: 'http://freed.herokuapp.com' } freed
+        .gabe gabe smith
+        .github.link
+          %a{ href: 'http://github.com/sgtFloyd' } github
+        .tumblr.link
+          %a{ href: 'http://sgtfloyd.tumblr.com' } tumblr
 
+        .projects.small projects:
+        .tchotchke.small.link
+          %a{ href: 'http://tchotchke.herokuapp.com' } tchotchke
+        .freed.small.link
+          %a{ href: 'http://freed.herokuapp.com' } freed
     -# #footer
     -#   .inner
     -#     = "Copyright &copy #{Time.now.year} Gabe Smith - Powered by "

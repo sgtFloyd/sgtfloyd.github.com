@@ -2,7 +2,6 @@ body {
   background: #303030;
   color: #fefefe;
   margin: 0;
-  text-align: center;
   font-family: "Lato", sans-serif;
   font-weight: 100;
   font-size: 300px; }
@@ -12,21 +11,29 @@ body {
     body a:hover {
       color: #f02475; }
 
-#body {
-  line-height: 0.5em; }
-  #body .sgtfloyd {
-    color: #f02475;
-    line-height: 0.75em;
-    font-weight: 300;
-    text-align: left; }
-  #body .tumblr {
-    margin-left: -1em; }
-  #body .twitter {
-    margin-left: 1em; }
-  #body .small {
-    line-height: 0.5em;
-    font-size: 0.5em; }
-    #body .small .tchotchke {
-      margin-left: -2em; }
-    #body .small .freed {
-      margin-left: 2em; }
+#body .inner {
+  text-align: center;
+  display: inline-block; }
+#body .gabe {
+  color: #f02475;
+  margin: -0.45em 0 0 -0.1em;
+  white-space: nowrap; }
+#body .link {
+  margin-top: -0.5em; }
+#body .small {
+  margin-top: -0.66em;
+  font-size: 0.5em; }
+#body .github {
+  z-index: 30; }
+#body .tumblr {
+  margin-left: -0.8em;
+  margin-top: -0.45em;
+  z-index: 20; }
+#body .projects {
+  color: #f02475;
+  margin-left: -2em;
+  margin-top: -0.25em; }
+#body .tchotchke {
+  margin-left: 4em; }
+#body .freed {
+  margin-left: 2.5em; }

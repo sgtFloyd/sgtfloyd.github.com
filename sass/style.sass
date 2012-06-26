@@ -6,7 +6,6 @@ body
   background: $grey
   color: $white
   margin: 0
-  text-align: center
   font-family: 'Lato', sans-serif
   font-weight: 100
   font-size: 300px
@@ -17,20 +16,30 @@ body
     text-decoration: none
 
 #body
-  line-height: .5em
-  .sgtfloyd
+  .inner
+    text-align: center
+    display: inline-block
+  .gabe
     color: $pink
-    line-height: .75em
-    font-weight: 300
-    text-align: left
-  .tumblr
-    margin-left: -1em
-  .twitter
-    margin-left: 1em
+    margin: -.45em 0 0 -.1em
+    white-space: nowrap
+  .link
+    margin-top: -.5em
   .small
-    line-height: .5em
+    margin-top: -.66em
     font-size: .5em
-    .tchotchke
-      margin-left: -2em
-    .freed
-      margin-left: 2em
+  .github
+    z-index: 30
+  .tumblr
+    margin-left: -.8em
+    margin-top: -.45em
+    z-index: 20
+
+  .projects
+    color: $pink
+    margin-left: -2em
+    margin-top: -.25em
+  .tchotchke
+    margin-left: 4em
+  .freed
+    margin-left: 2.5em
