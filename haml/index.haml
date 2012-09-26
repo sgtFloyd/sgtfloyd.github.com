@@ -22,9 +22,17 @@
       .inner
         .gabe gabe smith
         .github.link
-          %a{ href: 'http://github.com/sgtFloyd' } github
+          %a{ href: 'http://github.com/sgtFloyd' }
+            = precede 'github' do
+              .reveal /sgtFloyd
         .tumblr.link
-          %a{ href: 'http://sgtfloyd.tumblr.com' } tumblr
+          %a{ href: 'http://sgtfloyd.tumblr.com' }
+            = succeed 'tumblr' do
+              .reveal sgtfloyd.
+        .clipboard.link
+          %a{ href: 'http://clipboard.com/sgt/board' }
+            = precede 'clipboard' do
+              .reveal /sgt
 
         .projects.small projects:
         .tchotchke.small.link
