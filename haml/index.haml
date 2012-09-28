@@ -15,33 +15,24 @@
     %link{ rel:'stylesheet', type:'text/css', href:'http://fonts.googleapis.com/css?family=Lato:100' }
     %link{ rel:'stylesheet', type:'text/css', href:'style.css' }
 
-    -#%script{ src:'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js', type:'text/javascript' }
-
   %body
-    #body
-      .inner
-        .gabe gabe smith
-        .github.link
-          %a{ href: 'http://github.com/sgtFloyd' }
-            = precede 'github' do
-              .reveal /sgtFloyd
-        .tumblr.link
-          %a{ href: 'http://sgtfloyd.tumblr.com' }
-            = succeed 'tumblr' do
-              .reveal sgtfloyd.
-        .clipboard.link
-          %a{ href: 'http://clipboard.com/sgt/board' }
-            = precede 'clipboard' do
-              .reveal /sgt
+    .inner
+      .gabe.title gabe smith
+      .github.link
+        %a{ href: 'http://github.com/sgtFloyd' } github
+      .tumblr.link
+        %a{ href: 'http://sgtfloyd.tumblr.com' } tumblr
 
-        .projects.small projects:
-        .tchotchke.small.link
+      .projects
+        .medium.title projects:
+        .tchotchke.medium.link
           %a{ href: 'http://tchotchke.herokuapp.com' } tchotchke
-        .freed.small.link
+        .freed.medium.link
           %a{ href: 'http://freed.herokuapp.com' } freed
-    -# #footer
-    -#   .inner
-    -#     = "Copyright &copy #{Time.now.year} Gabe Smith - Powered by "
-    -#     %a{ href: 'http://pages.github.com/', title: 'GitHub Pages' } GitHub Pages
-    -#     ="-"
-    -#     %a{ href: 'https://github.com/sgtFloyd/sgtfloyd.github.com', title: 'View Source' } View Source
+
+      .footer
+        .center.x-small
+          Powered by
+          %a{ href: 'http://pages.github.com/', title: 'GitHub Pages' } GitHub Pages
+          \-
+          %a{ href: 'https://github.com/sgtFloyd/sgtfloyd.github.com', title: 'View Source' } View Source
