@@ -1,0 +1,38 @@
+:ruby
+  dark  = "#303030"
+  light = "#FEFEFE"
+  funk  = "#F02475"  # colourlovers.com/palette/522000
+
+:plain
+  <!DOCTYPE html>
+%html{ lang:'en' }
+  %head
+    %title sgtFloyd
+    %meta{"http-equiv"=>'Content-Type', content:'text/html;charset=UTF-8' }
+    %meta{ name:'description', content:'' }
+    %link{ rel:'shortcut icon', href:'favicon.png' }
+
+    %link{ rel:'stylesheet', type:'text/css', href:'http://fonts.googleapis.com/css?family=Lato:100' }
+    %link{ rel:'stylesheet', type:'text/css', href:'style.css' }
+
+  %body
+    .inner
+      .gabe.title gabe smith
+      .github.link
+        %a{ href: 'http://github.com/sgtFloyd' } github
+      .tumblr.link
+        %a{ href: 'http://sgtfloyd.tumblr.com' } tumblr
+
+      .projects
+        .medium.title projects:
+        .tchotchke.medium.link
+          %a{ href: 'http://tchotchke.herokuapp.com' } tchotchke
+        .freed.medium.link
+          %a{ href: 'http://freed.herokuapp.com' } freed
+
+      .footer
+        .center.x-small
+          Powered by
+          %a{ href: 'http://pages.github.com/', title: 'GitHub Pages' } GitHub Pages
+          \-
+          %a{ href: 'https://github.com/sgtFloyd/sgtfloyd.github.com', title: 'View Source' } View Source
