@@ -28,20 +28,32 @@
   %body
     .inner
       .gabe.title gabe smith
-      .github.link
-        %a{ href: 'http://github.com/sgtFloyd', title: 'github' } github
-      .tumblr.link
-        %a{ href: 'http://sgtfloyd.tumblr.com', title: 'tumblr' } tumblr
+      .large.list
+        .github.link
+          %a{ href: 'http://github.com/sgtFloyd', title: 'github' } github
+        .linkedin.link
+          %a{ href: 'http://linkedin.com/in/sgtfloyd', title: 'linkedin' } linkedin
 
-      .projects
-        .medium.title projects:
-        .tchotchke.medium.link
+      .small.list
+        .clipboard.link
+          %a{ href: 'http://clipboard.com/sgt', title: 'clipboard' } clipboard
+        .tumblr.link
+          %a{ href: 'http://sgtfloyd.tumblr.com', title: 'tumblr' } tumblr
+        .lastfm.link
+          %a{ href: 'http://last.fm/user/stickynips', title: 'last.fm' } last.fm
+        .steam.link
+          %a{ href: 'http://steamcommunity.com/id/sgtFloyd', title: 'steam' } steam
+      .clear
+
+      .medium.projects
+        .title projects:
+        .tchotchke.link
           %a{ href: 'http://tchotchke.herokuapp.com', title: 'tchotchke' } tchotchke
-        .freed.medium.link
+        .freed.link
           %a{ href: 'http://freed.herokuapp.com', title: 'freed' } freed
 
       .footer
-        .center.x-small
+        .x-small.centered
           powered by
           %a{ href: 'http://pages.github.com/', title: 'gitHub pages' } github pages
           \-
