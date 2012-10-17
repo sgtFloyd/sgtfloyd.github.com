@@ -12,7 +12,10 @@
     %link{ rel:'shortcut icon', href:'/favicon.gif' }
 
     %link{ rel:'stylesheet', type:'text/css', href:'http://fonts.googleapis.com/css?family=Lato:100' }
+    %link{ rel:'stylesheet', type:'text/css', href:'http://sgtfloyd.com/dotGlyfs/style.css' }
     %link{ rel:'stylesheet', type:'text/css', href:'style.css' }
+
+    <!--[if lte IE 7]><script src="http://sgtfloyd.com/dotGlyfs/lte-ie7.js"></script><![endif]-->
 
     :javascript
       var _gaq = _gaq || [];
@@ -35,14 +38,18 @@
           %a{ href: 'http://linkedin.com/in/sgtfloyd', title: 'linkedin' } linkedin
 
       .small.list
-        .lastfm.link
-          %a{ href: 'http://last.fm/user/stickynips', title: 'last.fm' } last.fm
-        .clipboard.link
-          %a{ href: 'http://clipboard.com/sgt', title: 'clipboard' } clipboard
-        .tumblr.link
-          %a{ href: 'http://sgtfloyd.tumblr.com', title: 'tumblr' } tumblr
         .steam.link
-          %a{ href: 'http://steamcommunity.com/id/sgtFloyd', title: 'steam' } steam
+          %a{ href: 'http://steamcommunity.com/id/sgtFloyd', title: 'steam' }
+            %span.glyf-steam
+        .clipboard.link
+          %a{ href: 'http://clipboard.com/sgt', title: 'clipboard' }
+            %span.glyf-clipboard
+        .lastfm.link
+          %a{ href: 'http://last.fm/user/stickynips', title: 'last.fm' }
+            %span.glyf-lastfm
+        .tumblr.link
+          %a{ href: 'http://sgtfloyd.tumblr.com', title: 'tumblr' }
+            %span.glyf-tumblr
       .clear
 
       .medium.projects
