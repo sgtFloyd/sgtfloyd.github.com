@@ -1,0 +1,48 @@
+:ruby
+  dark  = "#303030"
+  light = "#FEFEFE"
+  funk  = "#F02475"  # colourlovers.com/palette/522000
+
+!!!
+%html{ lang:'en' }
+  %head
+    %title sgtFloyd
+    %meta{"http-equiv"=>'Content-Type', content:'text/html;charset=UTF-8' }
+    %meta{ name:'description', content:'' }
+    %link{ rel:'shortcut icon', href:'/favicon.gif' }
+
+    %link{ rel:'stylesheet', type:'text/css', href:'http://fonts.googleapis.com/css?family=Lato:100' }
+    %link{ rel:'stylesheet', type:'text/css', href:'style.css' }
+
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-35181758-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+  %body
+    .inner
+      .gabe.title gabe smith
+      .github.link
+        %a{ href: 'http://github.com/sgtFloyd', title: 'github' } github
+      .tumblr.link
+        %a{ href: 'http://sgtfloyd.tumblr.com', title: 'tumblr' } tumblr
+
+      .projects
+        .medium.title projects:
+        .tchotchke.medium.link
+          %a{ href: 'http://tchotchke.herokuapp.com', title: 'tchotchke' } tchotchke
+        .freed.medium.link
+          %a{ href: 'http://freed.herokuapp.com', title: 'freed' } freed
+
+      .footer
+        .center.x-small
+          powered by
+          %a{ href: 'http://pages.github.com/', title: 'gitHub pages' } github pages
+          \-
+          %a{ href: 'https://github.com/sgtFloyd/sgtfloyd.github.com', title: 'view source' } view source
