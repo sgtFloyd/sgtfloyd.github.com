@@ -1,19 +1,19 @@
 body {
   background: #303030;
-  color: #fefefe;
+  color: #FEFEFE;
   margin: 0;
   font-family: "Lato", sans-serif;
   font-weight: 100;
   font-size: 200px; }
 
 a {
-  color: #fefefe;
+  color: #FEFEFE;
   text-decoration: none;
   -webkit-transition: color 0.25s ease;
   -moz-transition: color 0.25s ease;
   transition: color 0.25s ease; }
   a:hover {
-    color: #f02475; }
+    color: #F02475; }
 
 .inner {
   display: inline-block;
@@ -26,7 +26,7 @@ a {
   font-size: 0.75em; }
 
 .title {
-  color: #f02475; }
+  color: #F02475; }
 
 .medium {
   font-size: 0.5em; }
@@ -57,3 +57,5 @@ a {
 
 .footer {
   margin-top: 0.25em; }
+
+/*# sourceMappingURL=style.css.map */
