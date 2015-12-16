@@ -1,8 +1,3 @@
-:ruby
-  dark  = "#303030"
-  light = "#FEFEFE"
-  funk  = "#F02475"  # colourlovers.com/palette/522000
-
 !!!
 %html{ lang:'en' }
   %head
@@ -11,7 +6,8 @@
     %meta{name: 'description', content: ''}
     %link{rel: 'shortcut icon', href: '/favicon.gif'}
 
-    %link{rel: 'stylesheet', type: 'text/css', href: 'http://fonts.googleapis.com/css?family=Lato:100'}
+    %link{rel: 'stylesheet', type: 'text/css', href: 'http://fonts.googleapis.com/css?family=Lato:300'}
+    %link{rel: 'stylesheet', type: 'text/css', href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'}
     %link{rel: 'stylesheet', type: 'text/css', href: 'style.css'}
 
     :javascript
@@ -23,22 +19,20 @@
 
   %body
     .inner
-      .gabe.title gabe smith
-      .github.link
-        %a{ href: 'http://github.com/sgtFloyd', title: 'github' } github
-      .tumblr.link
-        %a{ href: 'http://sgtfloyd.tumblr.com', title: 'tumblr' } tumblr
-
-      .projects
-        .medium.title projects:
-        .tchotchke.medium.link
-          %a{ href: 'http://tchotchke.herokuapp.com', title: 'tchotchke' } tchotchke
-        .freed.medium.link
-          %a{ href: 'http://freed.herokuapp.com', title: 'freed' } freed
-
-      .footer
-        .center.x-small
-          powered by
-          %a{ href: 'http://pages.github.com/', title: 'gitHub pages' } github pages
-          \-
-          %a{ href: 'https://github.com/sgtFloyd/sgtfloyd.github.com', title: 'view source' } view source
+      .title gabe smith
+      .links
+        %a{href: 'https://github.com/sgtfloyd'}
+          %i.fa.fa-github-square
+        %a{href: 'http://steamcommunity.com/id/sgtFloyd'}
+          %i.fa.fa-steam-square
+        %a{href: 'https://www.linkedin.com/in/sgtfloyd'}
+          %li.fa.fa-linkedin-square
+        %a{href: 'http://last.fm/user/stickynips'}
+          %i.fa.fa-lastfm-square
+        %a{href: 'http://blog.sgtfloyd.com'}
+          %i.fa.fa-tumblr-square
+        %a{href: 'https://twitter.com/sgtFlyd'}
+          %i.fa.fa-twitter-square
+        -# https://github.com/FortAwesome/Font-Awesome/issues/1715
+        -# %a{href: 'https://goodreads.com/sgtfloyd'}
+        -#   %i.fa.fa-book
