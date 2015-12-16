@@ -1,14 +1,14 @@
-for haml_file in `find haml -name '*.haml'`
+for haml_file in `find . -name '*.haml'`
 do
-  output="${haml_file:5}"
+  output="${haml_file}"
   output="${output%aml}tml"
   `haml $haml_file $output`
   echo built $haml_file -\> $output
 done
 
-for sass_file in `find sass -name '*.sass'`
+for sass_file in `find . -name '*.sass'`
 do
-  output="${sass_file:5}"
+  output="${sass_file}"
   output="${output%sass}css"
   `sass $sass_file $output`
   echo built $sass_file -\> $output
