@@ -29,18 +29,32 @@
   %body
     .inner
       .title gabe smith
-      .links
-        %a{href: 'https://github.com/sgtfloyd'}
-          %i.fab.fa-github-square
-        -# %a{href: 'https://www.linkedin.com/in/sgtfloyd'}
-        -#   %li.fab.fa-linkedin
-        %a{href: 'http://steamcommunity.com/id/sgtFloyd'}
-          %i.fab.fa-steam-square
-        %a{href: 'http://last.fm/user/stickynips'}
-          %i.fab.fa-lastfm-square
-        %a{href: 'https://goodreads.com/sgtfloyd'}
-          %i.fab.fa-goodreads
-        %a{href: 'http://blog.sgtfloyd.com'}
-          %i.fab.fa-tumblr-square
-        %a{href: 'https://twitter.com/sgtFlyd'}
-          %i.fab.fa-twitter-square
+      %ul.links.fa-ul
+        %li
+          %a.link{href: 'https://github.com/sgtfloyd', target: '_blank'}<>
+            %i.icon.fab.fa-github-square
+            %span.text github
+        %li
+          %a.link{href: 'https://www.linkedin.com/in/sgtfloyd', target: '_blank'}<>
+            %i.icon.fab.fa-linkedin
+            %span.text linkedin
+        %li
+          %a.link{href: 'http://steamcommunity.com/id/sgtFloyd', target: '_blank'}<>
+            %i.icon.fab.fa-steam-square
+            %span.text steam
+        %li
+          %a.link{href: 'http://last.fm/user/stickynips', target: '_blank'}<>
+            %i.icon.fab.fa-lastfm-square
+            %span.text last.fm
+        %li
+          %a.link{href: 'https://goodreads.com/sgtfloyd', target: '_blank'}<>
+            %i.icon.fab.fa-goodreads
+            %span.text goodreads
+        %li
+          %a.link{href: 'http://blog.sgtfloyd.com', target: '_blank'}<>
+            %i.icon.fab.fa-tumblr-square
+            %span.text blog
+        %li
+          %a.link{href: 'https://twitter.com/sgtFlyd', target: '_blank'}<>
+            %i.icon.fab.fa-twitter-square
+            %span.text twitter

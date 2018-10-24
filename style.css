@@ -1,28 +1,37 @@
+html {
+  background: url(background.jpg) repeat;
+  background-size: cover; }
+
 body {
-  background: #F8F8F8;
   color: #292929;
   margin: 0;
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 200px; }
 
-a {
-  color: #292929;
-  text-decoration: none; }
-
 .inner {
   display: inline-block;
   overflow: hidden;
-  white-space: nowrap;
-  margin: 0.25em; }
+  margin: 0.25em;
+  white-space: nowrap; }
 
 .title {
-  margin-top: -0.45em; }
+  margin-top: -0.44em; }
 
 .links {
-  font-size: 0.5em;
-  margin-left: 1em; }
-  .links a {
-    margin-left: 0.2em; }
+  font-size: 0.25em;
+  margin-top: 0; }
+
+.link {
+  color: #292929;
+  display: block;
+  text-decoration: none; }
+  .link .icon {
+    opacity: 0.9;
+    padding-right: 0.1em; }
+  .link:active .text, .link:hover .text {
+    text-decoration: underline; }
+  .link:active .icon, .link:hover .icon {
+    opacity: 1; }
 
 /*# sourceMappingURL=style.css.map */
