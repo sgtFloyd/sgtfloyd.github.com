@@ -1,18 +1,35 @@
-html {
-  background: url(background.jpg) repeat;
-  background-size: cover; }
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%; }
 
 body {
   color: #292929;
-  margin: 0;
   font-family: "Lato", sans-serif;
-  font-weight: 300;
-  font-size: 200px; }
+  font-size: 200px;
+  font-weight: 300; }
+
+.background {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: -1; }
+
+.row {
+  display: flex;
+  flex-direction: row;
+  height: 25%; }
+
+.square {
+  width: 25%; }
 
 .inner {
   display: inline-block;
+  margin: 0.25em 0 0 0.25em;
   overflow: hidden;
-  margin: 0.25em;
   white-space: nowrap; }
 
 .title {
@@ -20,18 +37,19 @@ body {
 
 .links {
   font-size: 0.25em;
-  margin-top: 0; }
+  margin: 0 0 0 2.5em; }
 
 .link {
   color: #292929;
   display: block;
   text-decoration: none; }
-  .link .icon {
-    opacity: 0.9;
-    padding-right: 0.1em; }
   .link:active .text, .link:hover .text {
     text-decoration: underline; }
   .link:active .icon, .link:hover .icon {
     opacity: 1; }
+
+.icon {
+  opacity: 0.9;
+  padding-right: 0.1em; }
 
 /*# sourceMappingURL=style.css.map */

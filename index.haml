@@ -26,7 +26,17 @@
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       ga('create','UA-35181758-1', 'auto');ga('send','pageview');
 
+    :ruby
+      background_colors = [ %w[#eeebcc #dee0cb #a99d9f #beb5b6],
+                            %w[#cdd4b3 #c5b8a8 #a98f9a #917b88],
+                            %w[#bdc7ac #b6b7a7 #bf9694 #947f88],
+                            %w[#a79c96 #aa9194 #d7a197 #9d888d] ]
   %body
+    .background
+      - background_colors.each do |row|
+        .row
+          - row.each do |color|
+            .square{style: "background-color: #{color}"}
     .inner
       .title gabe smith
       %ul.links.fa-ul

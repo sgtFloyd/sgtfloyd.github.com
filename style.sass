@@ -1,20 +1,37 @@
-$black: #292929
+$text-color: #292929
 
-html
-  background: url(background.jpg) repeat
-  background-size: cover
+html, body
+  height: 100%
+  margin: 0
+  padding: 0
+  width: 100%
 
 body
-  color: $black
-  margin: 0
+  color: $text-color
   font-family: 'Lato', sans-serif
-  font-weight: 300
   font-size: 200px
+  font-weight: 300
+
+.background
+  display: flex
+  flex-direction: column
+  height: 100%
+  position: fixed
+  width: 100%
+  z-index: -1
+
+.row
+  display: flex
+  flex-direction: row
+  height: 25%
+
+.square
+  width: 25%
 
 .inner
   display: inline-block
+  margin: .25em 0 0 .25em
   overflow: hidden
-  margin: .25em
   white-space: nowrap
 
 .title
@@ -22,17 +39,18 @@ body
 
 .links
   font-size: 0.25em
-  margin-top: 0
+  margin: 0 0 0 2.5em
 
 .link
-  color: $black
+  color: $text-color
   display: block
   text-decoration: none
-  .icon
-    opacity: 0.9
-    padding-right: 0.1em
   &:active, &:hover
     .text
       text-decoration: underline
     .icon
       opacity: 1
+
+.icon
+  opacity: 0.9
+  padding-right: 0.1em
