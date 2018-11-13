@@ -23,7 +23,7 @@ body {
   flex-direction: row;
   height: 25%; }
 
-.square {
+.cell {
   width: 25%; }
 
 .inner {
@@ -49,7 +49,7 @@ body {
     opacity: 1; }
 
 .icon {
-  opacity: 0.9;
+  opacity: 0.8;
   padding-right: 0.1em; }
 
 /*# sourceMappingURL=style.css.map */

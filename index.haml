@@ -36,7 +36,7 @@
       - background_colors.each do |row|
         .row
           - row.each do |color|
-            .square{style: "background-color: #{color}"}
+            .cell{style: "background-color: #{color}"}
     .inner
       .title gabe smith
       %ul.links.fa-ul
@@ -49,6 +49,10 @@
             %i.icon.fab.fa-linkedin
             %span.text linkedin
         %li
+          %a.link{href: 'http://blog.sgtfloyd.com', target: '_blank'}<>
+            %i.icon.fa.fa-pen-square
+            %span.text blog
+        %li
           %a.link{href: 'http://steamcommunity.com/id/sgtFloyd', target: '_blank'}<>
             %i.icon.fab.fa-steam-square
             %span.text steam
@@ -60,11 +64,7 @@
           %a.link{href: 'https://goodreads.com/sgtfloyd', target: '_blank'}<>
             %i.icon.fab.fa-goodreads
             %span.text goodreads
-        %li
-          %a.link{href: 'http://blog.sgtfloyd.com', target: '_blank'}<>
-            %i.icon.fab.fa-tumblr-square
-            %span.text blog
-        %li
-          %a.link{href: 'https://twitter.com/sgtFlyd', target: '_blank'}<>
-            %i.icon.fab.fa-twitter-square
-            %span.text twitter
+        -# %li
+        -#   %a.link{href: 'https://twitter.com/sgtFlyd', target: '_blank'}<>
+        -#     %i.icon.fab.fa-twitter-square
+        -#     %span.text twitter
